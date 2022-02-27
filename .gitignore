@@ -1,4 +1,8 @@
-/node_modules
-.env
-/public
-/build
+backend/.env
+frontend/node_modules
+backend/node_modules
+node_modules
+frontend/package-lock.json
+backend/package-lock.json
+package-lock.json
+backend/public

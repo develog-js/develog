@@ -1,0 +1,88 @@
+@use '../utils' as *;
+
+.develog-container {
+  min-width: rem(1100px);
+  width: 70%;
+  margin: 0 auto;
+  li {
+    cursor: pointer;
+  }
+}
+
+.post {
+  height: rem(250%);
+  padding: rem(10px);
+  line-height: 200%;
+  border-radius: rem(5px);
+  word-break: break-all;
+  border: 2px solid $gray;
+  overflow: hidden;
+
+  &__title {
+    display: block;
+    font-size: rem(25px);
+    font-weight: 700px;
+    margin-bottom: rem(20px);
+  }
+
+  &__desc {
+    font-size: rem(15px);
+    font-size: rem(20px);
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.post:hover {
+  transition: all 0.5s;
+  transition-timing-function: ease;
+  position: relative;
+  transform: translateY(-10px);
+}
+
+.popular-posts,
+.all-posts {
+  border-radius: rem(5px);
+  padding: rem(20px);
+  border: 1px solid #c4c4c4;
+
+  &__title {
+    font-size: rem(23px);
+    font-weight: 700;
+  }
+}
+
+.popular-posts {
+  height: rem(300%);
+  margin: rem(30px) 0 rem(15px);
+  display: flex;
+  justify-content: center;
+
+  .post {
+    padding: rem(20px);
+    width: rem(300%);
+    margin: rem(5%) rem(20px) 0;
+  }
+}
+
+.all-posts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 30px;
+  .post {
+    padding: rem(20px) rem(25px);
+    margin: rem(15px) auto;
+    width: 100%;
+  }
+  &__title {
+    margin: rem(40px) rem(20px) rem(30px) 0;
+    display: block;
+  }
+}

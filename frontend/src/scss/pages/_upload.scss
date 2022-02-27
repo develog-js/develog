@@ -1,0 +1,70 @@
+@use '../utils/unit' as *;
+@use '../utils/colors' as *;
+@use '../components' as *;
+
+// @use '../layout/layout' as *;
+
+.upload-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.upload {
+  margin-top: rem(20px);
+  fieldset {
+    width: 90%;
+    text-align: center;
+  }
+  &__title {
+    font-size: rem(32px);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    align-items: center;
+    height: rem(900px);
+
+    #upload-title {
+      display: inline-block;
+      width: 100%;
+      height: rem(70px);
+      font-size: rem(32px);
+      margin-bottom: rem(30px);
+
+      padding-bottom: rem(10px);
+
+      border: none;
+      appearance: none;
+      overflow: hidden;
+      border-bottom: 1px solid #bababa;
+      outline: none;
+    }
+
+    #upload-title::placeholder {
+      margin-left: rem(25px);
+      opacity: 0.5;
+    }
+
+    &__textarea {
+      width: 100%;
+      min-height: 50vh;
+      resize: none;
+      appearance: none;
+      overflow: hidden;
+      outline: none;
+      // border:none;
+
+      margin-bottom: rem(30px);
+      font-size: rem(20px);
+      padding: rem(25px);
+    }
+
+    &__submit {
+      height: rem(80px);
+      margin-bottom: rem(80px);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<main class="detail-container">
+  <section class="detail">
+    <h1 class="detail__title"></h1>
+    <span class="detail__date">time</span>
+    <div class="detail__info">
+      <button class="btn">
+        <img class="avatar-button avatar-button--size" src="#" alt="avatar-button" />
+      </button>
+      <span class="author"></span>
+      <button class="fullheart heart-btn btn">
+        <i class="far fa-heart"></i>
+      </button>
+      <button class="none fullheart heart-btn btn">
+        <i class="fas fa-heart"></i>
+      </button>
+      <button class="none edit pencil-btn btn">
+        <i class="far fa-edit"></i>
+      </button>
+      <button class="none edit trash-btn btn">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+    <pre class="detail__content"></pre>
+  </section>
+
+  <h2 class="comments-title">댓글</h2>
+  <section class="user-comment">
+    <div class="comment__user-info">
+      <button class="btn">
+        <img class="avatar-button avatar-button--size" src="#" alt="user-avatar" />
+      </button>
+      <span class="user-id"></span>
+    </div>
+    <div class="textarea-container">
+      <textarea class="textarea" id="input-box" rows="3" maxlength="100" placeholder="댓글을 입력해주세요."></textarea>
+      <button class="textarea__cancel btn no-display">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <button class="user-comment__upload button">등록</button>
+  </section>
+  <section class="comments"></section>
+</main>

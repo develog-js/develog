@@ -1,0 +1,37 @@
+@use '../layout' as *;
+@use '../utils' as *;
+
+.logo {
+  text-align: center;
+  // margin-top: rem(50px);
+  font-size: rem(34px);
+}
+
+.sign-form {
+  margin: rem(70px) auto;
+  width: rem(60%);
+  min-width: rem(350px);
+}
+
+.naver {
+  text-align: center;
+  margin: 0 auto;
+  text-decoration-line: none;
+
+  span {
+    display: inline-block;
+    padding: rem(30px) rem(100px) rem(15px);
+    border-top: rem(1px) solid gray;
+    font-size: rem(18px);
+    color: #181818;
+    font-weight: 500;
+  }
+
+  &--button {
+    display: block;
+    margin: rem(10px) auto;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

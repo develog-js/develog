@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+.input-box {
+  position: relative;
+  padding: rem(20px) 0;
+  font-size: rem(22px);
+  font-weight: 300;
+  height: rem(40px);
+  margin-bottom: rem(30px);
+  width: rem(350px);
+  box-sizing: content-box;
+
+  .complete,
+  .error {
+    position: absolute;
+    right: rem(10px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .complete {
+    color: $green;
+  }
+  .error {
+    color: $red;
+  }
+
+  .error-message,
+  .doubleCheck-message,
+  .check-message {
+    font-size: rem(14px);
+    color: $red;
+  }
+
+  &__input {
+    all: unset;
+    border: rem(1.5px) solid $gray;
+    border-radius: rem(5px);
+    width: 100%;
+    height: 100%;
+    text-indent: rem(10px);
+    font-size: rem(18px);
+  }
+
+  label {
+    position: absolute;
+    top: rem(-10px);
+  }
+}

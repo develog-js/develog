@@ -1,0 +1,207 @@
+@use '../utils/unit' as *;
+@use '../utils/colors' as *;
+
+.user-profile {
+  position: relative;
+  width: 100%;
+  // height: 300px;
+  // border: 2px solid $black;
+  border-radius: rem(10px);
+  padding: rem(10px);
+  padding-top: rem(50px);
+}
+
+.user-profile {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  box-sizing: border-box;
+
+  &-avatar {
+    padding: rem(10px);
+    margin: auto;
+    width: rem(200px);
+    height: rem(200px);
+    border-radius: 50%;
+    min-width: rem(120px);
+    max-width: rem(200px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    // height: 80%;
+
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   padding-bottom: 100%;
+    //   border-radius: 50%;
+    //   border: 2px solid $black;
+    //   background-image: url('../assets/avatar.png');
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    // }
+  }
+
+  &-info {
+    margin: auto 0;
+    padding: 0 rem(40px);
+    box-sizing: border-box;
+    // height: 80%;
+
+    .nickname {
+      white-space: nowrap;
+      // position: absolute;
+      box-sizing: border-box;
+      font-size: rem(35px);
+      margin-bottom: rem(30px);
+    }
+
+    &-input {
+      position: relative;
+      box-sizing: border-box;
+
+      input {
+        all: unset;
+        // border-bottom: 1px solid $gray;
+        width: 70%;
+        max-width: rem(400px);
+        height: rem(50px);
+        padding-left: rem(100px);
+        font-size: rem(22px);
+      }
+
+      label {
+        position: absolute;
+        top: 50%;
+        left: rem(10px);
+        transform: translateY(-50%);
+        font-size: rem(22px);
+        color: $darkgray;
+      }
+    }
+  }
+}
+
+.information {
+  position: relative;
+  margin-top: rem(50px);
+  width: 100%;
+  height: rem(300px);
+  border: rem(1px) solid $black;
+  border-radius: rem(10px);
+  padding: rem(20px);
+  box-sizing: border-box;
+
+  .postNum {
+    border-bottom: 1px solid $gray;
+    font-size: rem(22px);
+    padding: rem(10px) rem(15px);
+    span:first-child {
+      margin-right: rem(20px);
+    }
+  }
+
+  .likePostList {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: auto;
+    padding: rem(20px);
+
+    li {
+      border-radius: rem(5px);
+      padding: rem(10px);
+      text-indent: rem(10px);
+      font-size: rem(18px);
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: aliceblue;
+    }
+  }
+}
+
+.button-box {
+  margin-top: rem(30px);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    margin-left: rem(20px);
+  }
+}
+
+.profileEdit,
+.withdrawal {
+  position: absolute;
+  width: 60%;
+  height: 40%;
+  min-height: rem(330px);
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: rem(0px) rem(50px);
+  padding-top: rem(80px);
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: rem(15px);
+  z-index: 100;
+  align-items: center;
+
+  &--close {
+    all: unset;
+    position: absolute;
+    right: rem(10px);
+    top: rem(10px);
+    padding: rem(5px);
+    font-size: rem(30px);
+    cursor: pointer;
+  }
+
+  h3 {
+    word-break: keep-all;
+    font-size: rem(30px);
+  }
+
+  &--password {
+    position: absolute;
+    text-indent: rem(10px);
+    width: 60%;
+    height: rem(45px);
+    bottom: rem(140px);
+    max-height: rem(50px);
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .profileEdit-confirm,
+  .withdrawal-confirm {
+    position: absolute;
+    bottom: rem(40px);
+  }
+
+  .error-message {
+    position: absolute;
+    bottom: rem(110px);
+    color: $red;
+  }
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  background-color: rgba($black, $alpha: 0.3);
+}
+
+.heart--icon {
+  display: inline;
+  color: $fullheart;
+  margin-right: rem(10px);
+}

@@ -1,0 +1,67 @@
+@use '../utils/unit' as *;
+@use '../utils/colors' as *;
+
+.label--avatar {
+  margin-bottom: rem(40px);
+}
+
+.mypageEdit--avatar {
+  position: relative;
+  width: rem(200px);
+  height: rem(200px);
+  border-radius: 50%;
+  // background-image: url('../assets/avatar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0 auto;
+  transition: all 0.5s;
+  opacity: 0.8;
+  cursor: pointer;
+
+  .plusIcon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: rem(50px);
+    font-weight: 300;
+    z-index: 100;
+    border-radius: 50%;
+    background-color: $white;
+    opacity: 0.8;
+  }
+
+  &:hover,
+  &:hover .plusIcon {
+    opacity: 1;
+  }
+}
+
+.mypageEdit {
+  margin-top: rem(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: rem(70px) auto;
+  width: 60%;
+  min-width: rem(350px);
+
+  &--form {
+    margin: 0;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  .button {
+    margin: 0 rem(20px);
+    margin-bottom: rem(50px);
+  }
+}
+
+.mypageEdit--form {
+  #email:disabled {
+    background-color: $lightgray;
+  }
+}

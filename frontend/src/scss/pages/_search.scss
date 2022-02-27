@@ -1,0 +1,85 @@
+@use '../utils/' as *;
+
+.posts-info {
+  text-align: center;
+  font-size: rem(25px);
+}
+
+.no-keyword {
+  text-align: center;
+  font-size: rem(25px);
+}
+
+.search-container {
+  text-align: center;
+}
+
+.search-posts-container {
+  text-align: left;
+}
+
+.no-posts {
+  display: inline;
+  text-align: center;
+  font-size: rem(25px);
+}
+
+.search-post {
+  border: 2px solid $gray;
+  word-break: break-all;
+  border-radius: rem(5px);
+  padding: rem(15px) rem(25px);
+  line-height: 200%;
+  overflow: hidden;
+  width: 70%;
+  height: 50%;
+  margin: rem(15px) auto;
+
+  .user-info {
+    a {
+      text-decoration: none;
+    }
+    a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  .user-nickname {
+    margin-left: rem(10px);
+    font-size: rem(25px);
+  }
+
+  .avatar-button--search {
+    width: rem(50%);
+    height: rem(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    display: block;
+    font-size: rem(25px);
+    font-weight: rem(800px);
+    margin: rem(15px) 0;
+  }
+
+  &__desc {
+    font-size: rem(20px);
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &__desc::before {
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

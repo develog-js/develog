@@ -1,0 +1,247 @@
+@use '../layout/layout' as *;
+@use '../utils/unit' as *;
+@use '../utils/colors' as *;
+@use '../components' as *;
+
+.detail-container {
+  margin: 0 auto;
+  min-width: rem(550px);
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 701px) and (max-width: 1000px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1001px) {
+    width: 60%;
+  }
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+// post part
+.detail {
+  &__title {
+    font-size: rem(40px);
+    margin-bottom: rem(30px);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+    margin-bottom: rem(60px);
+
+    :nth-child(n):not(img) {
+      margin-right: rem(15px);
+    }
+
+    // 동적데이터
+    .author {
+      font-size: rem(20px);
+    }
+
+    i {
+      font-size: rem(25px);
+    }
+
+    .heart-btn {
+      font-size: rem(20px);
+    }
+
+    .fullheart {
+      color: $fullheart;
+    }
+
+    .edit {
+      font-size: rem(20px);
+      position: absolute;
+      right: 0;
+    }
+
+    .pencil-btn {
+      right: rem(50px);
+    }
+  }
+
+  &__content {
+    height: 100%;
+    margin-bottom: rem(100px);
+    font-size: rem(25px);
+    line-height: 1.3;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+}
+.avatar-button {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.comments-title {
+  display: block;
+  font-size: rem(25px);
+  margin-bottom: rem(20px);
+}
+
+// comment-input part
+.user-comment {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: rem(50px);
+  // width: 90%;
+
+  .textarea {
+    display: inline-block;
+    resize: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    border-radius: rem(5px);
+
+    font-size: rem(20px);
+    margin-right: rem(30px);
+    padding-right: rem(40px);
+    border: 2px solid #5c5a5a;
+    opacity: 0.3;
+    width: 100%;
+    height: rem(60px);
+
+    // word-break: break-all;
+    // white-space: pre-wrap;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+    &::placeholder {
+      line-height: 2.6;
+      padding-left: rem(15px);
+    }
+    &-container {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__cancel {
+      position: absolute;
+      right: rem(40px);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__upload {
+    border: 1px solid #3333;
+    display: inline;
+    width: rem(120px);
+    height: rem(60px);
+  }
+}
+
+//  comment part
+.comment {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  margin: 0 0 rem(20px) 0;
+  border-radius: rem(10px);
+
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    // width: 90%;
+    text-align: center;
+  }
+  @media screen and (min-width: 701px) and (max-width: 1000px) {
+    // width: 80%;
+  }
+  @media screen and (min-width: 1001px) {
+    // width: 90%;
+  }
+  height: 100%;
+  // min-width: rem(550px);
+  position: relative;
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    padding: rem(15px);
+
+    &--border {
+      border-right: 1px solid black;
+    }
+
+    .avatar-button--size {
+      width: rem(40px);
+      height: rem(40px);
+      margin: rem(5px);
+      margin-right: rem(10px);
+    }
+    .user-id {
+      margin-right: rem(10px);
+      font-size: rem(20px);
+      word-break: keep-all;
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+
+    // white-space: pre-wrap;
+    word-break: break-all;
+    span {
+      display: inline-block;
+
+      height: 100%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 30%;
+      padding: 0 rem(80px) 0 rem(20px);
+    }
+    @media screen and (max-width: 800px) {
+      width: 50%;
+      padding: 0 rem(80px) 0 rem(20px);
+    }
+    @media screen and (min-width: 801px) {
+      width: 60%;
+      padding: 0 rem(80px) 0 rem(20px);
+    }
+  }
+  .date {
+    padding-right: rem(40px);
+    white-space: nowrap;
+  }
+
+  .edit {
+    position: absolute;
+
+    right: rem(10px);
+    padding: rem(5px);
+    font-size: rem(15px);
+  }
+  .pencil-btn {
+    right: rem(150px);
+  }
+}

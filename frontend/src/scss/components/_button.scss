@@ -1,0 +1,106 @@
+@use '../utils/unit' as *;
+@use '../utils/colors' as *;
+
+.button {
+  all: unset;
+  cursor: pointer;
+  border-radius: rem(10px);
+  width: rem(150px);
+  height: rem(50px);
+  text-align: center;
+  color: $white;
+  font-size: rem(16px);
+  background-color: $blue;
+  box-sizing: border-box;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    cursor: default;
+    opacity: 0.8;
+  }
+
+  &--login,
+  &--posting {
+    margin-left: rem(30px);
+    width: rem(120px);
+    height: rem(40px);
+    background-color: $black;
+    transition: all 0.3s;
+  }
+
+  &--edit {
+    background-color: $blue;
+    transition: all 0.3s;
+  }
+  &--withdrawal {
+    background-color: $red;
+    transition: all 0.3s;
+  }
+
+  &--back {
+    transition: all 0.3s;
+  }
+
+  &--editComplete {
+    background-color: $blue;
+    transition: all 0.3s;
+  }
+
+  font-size: rem(20px);
+  background: #333;
+}
+
+button.double-check {
+  position: absolute;
+  right: -100px;
+  top: 51%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 40px;
+  border-radius: rem(20px);
+  font-size: rem(14px);
+  &.checking {
+    background-color: green;
+  }
+}
+
+.sign-buttons {
+  margin-top: rem(50px);
+  text-align: center;
+  & .button {
+    margin: rem(10px);
+  }
+}
+
+.avatar-button {
+  all: unset;
+  cursor: pointer;
+  border-radius: rem(50%);
+}
+
+.see-more {
+  all: unset;
+  cursor: pointer;
+  border-radius: rem(10px);
+  width: rem(150%);
+  height: rem(50%);
+  font-size: rem(20px);
+  text-align: center;
+  background: $gray;
+  color: $white;
+  bottom: 0;
+  left: 50%;
+  margin: rem(50px) 0;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.see-more:hover {
+  background: $black;
+  color: $white;
+}
