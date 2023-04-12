@@ -39,7 +39,7 @@ rest api를 사용하여 블로그 포스팅 및 수정, 삭제 기능 구현
 ## UI / 스토리보드
 
 _자세한 UI는 오른쪽 링크를 통해 확인하실 수 있습니다._
-[Figma UI Link](https://www.figma.com/file/EtaoLOngEQHhQa84e2qY3n/Untitled)
+[Figma UI Link](https://www.figma.com/file/54xC8N3LHI9i3QSFawDOhb/develog?node-id=0-1&t=84kH4Rl8ZjG2zMCd-0)
 
 - 로그인 페이지
 - 회원가입 페이지
